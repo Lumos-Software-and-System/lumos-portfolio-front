@@ -16,7 +16,7 @@ const RootLayout = ({
   return (
     <html lang="pt-br">
       <body>
-        <ThemeProvider theme={theme}>{children}+ </ThemeProvider>
+        <ThemeProvider theme={theme}>{children}</ThemeProvider>
       </body>
     </html>
   );
