@@ -1,0 +1,46 @@
+@use "/src/scss/_abstract/variables" as *;
+@use "/src/scss/_abstract/mixins" as *;
+
+.header {
+    position: fixed;
+    top: 0;
+
+    background-color: $color-white;
+
+    padding: 18px 20px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    @include flexRow();
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 100%;
+
+    overflow: hidden;
+
+    .menuButton {
+        display: flex;
+    }
+
+    .navDesktop {
+        display: none;
+    }
+
+    @media (min-width: $tablet-breakpoint) {
+        .menuButton {
+            display: none;
+        }
+        .navDesktop {
+            display: block;
+            max-width: 70%;
+            > ul {
+                @include flexRow();
+                gap: 40px;
+                > li {
+                    &:hover {
+                        color: $color-purple;
+                    }
+                }
+            }
+        }
+    }
+}

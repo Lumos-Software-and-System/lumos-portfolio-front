@@ -1,9 +1,11 @@
+import Header from "@/components/headers";
+
 const Home = () => {
-  return (
-    <main>
-      <h2>aqaejdaskjlhdasjkld</h2>
-    </main>
-  );
+    return (
+        <main>
+            <Header />
+        </main>
+    );
 };
 
 export default Home;
