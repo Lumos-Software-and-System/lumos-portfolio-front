@@ -1,6 +1,8 @@
 @use "../../scss/_abstract/mixins" as *;
 @use "../../scss/_abstract/variables" as *;
 
+@import url("https://fonts.googleapis.com/css2?family=Varela&display=swap");
+
 .menuContainer {
     position: fixed;
     top: 0;
@@ -32,11 +34,17 @@
                 @include flexColumn();
                 gap: 18px;
 
-                font-size: 1.125rem;
-                font-weight: 600;
-
                 color: $color-white;
                 text-transform: uppercase;
+
+                > li {
+                    > a {
+                        font-size: 1.125rem;
+                        font-weight: 400;
+
+                        font-family: "Varela", sans-serif;
+                    }
+                }
             }
         }
 
