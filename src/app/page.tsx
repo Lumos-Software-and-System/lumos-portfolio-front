@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <>
       <main>
-        <SectionWorks />
+        <h2>aqaejdaskjlhdasjkld</h2>
       </main>
     </>
   );
