@@ -1,0 +1,11 @@
+@use "../../scss/_abstract/mixins" as *;
+
+.socialContainer {
+    @include flexRow();
+    gap: 4px;
+
+    > button {
+        background-color: transparent;
+        border: none;
+    }
+}

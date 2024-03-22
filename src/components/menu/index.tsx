@@ -6,6 +6,7 @@ import { IoMdClose } from "react-icons/io";
 import Link from "next/link";
 
 import styles from "./styles.module.scss";
+import SocialMedias from "../social-medias";
 
 const Menu = () => {
     const { handleMenu } = useMenu();
@@ -50,6 +51,10 @@ const Menu = () => {
                         </li>
                     </ul>
                 </nav>
+                <div>
+                    <p>Logo</p>
+                    <SocialMedias />
+                </div>
             </div>
             <div className={styles.menuBg} onClick={handleMenu}></div>
         </section>

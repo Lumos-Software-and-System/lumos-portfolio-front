@@ -26,17 +26,27 @@
         }
 
         .navMobile {
-            padding: 56px 16px;
+            padding: 56px 16px 40px;
 
             > ul {
                 @include flexColumn();
-                gap: 12px;
+                gap: 18px;
 
                 font-size: 1.125rem;
                 font-weight: 600;
 
                 color: $color-white;
                 text-transform: uppercase;
+            }
+        }
+
+        > div {
+            padding-left: 10px;
+            @include flexColumn();
+            gap: 10px;
+
+            > p {
+                padding-left: 6px;
             }
         }
     }
