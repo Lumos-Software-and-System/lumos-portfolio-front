@@ -1,2 +1,42 @@
+@use "../../scss/_abstract/variables" as *;
+@use "../../scss/_abstract/mixins" as *;
+
 .container__footer {
+    background-color: $color-purple;
+    color: $color-white;
+
+    font-size: 0.875rem;
+    font-weight: 700;
+
+    padding: 40px 16px;
+
+    > h2 {
+        margin-bottom: 10px;
+    }
+
+    > div {
+        @include flexColumn();
+        gap: 10px;
+        align-items: center;
+
+        > span {
+            text-align: left;
+            width: 100%;
+        }
+    }
+
+    @media (min-width: $tablet-breakpoint) {
+        font-size: 1.25rem;
+
+        padding: 40px 32px;
+
+        > h2 {
+            margin-bottom: 23px;
+        }
+
+        > div {
+            align-items: flex-start;
+            gap: 23px;
+        }
+    }
 }
