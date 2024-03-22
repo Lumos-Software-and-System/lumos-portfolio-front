@@ -37,7 +37,11 @@
                 gap: 40px;
                 > li {
                     &:hover {
+                        transition: 0.6s;
+                        transform: scale(1.1);
                         color: $color-purple;
+
+                        text-decoration: underline;
                     }
                 }
             }
