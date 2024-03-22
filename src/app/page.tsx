@@ -1,12 +1,10 @@
-import SectionWorks from "@/components/section/section-works";
+import Header from "@/components/headers";
 
 const Home = () => {
   return (
-    <>
-      <main>
-        <h2>aqaejdaskjlhdasjkld</h2>
-      </main>
-    </>
+    <main>
+      <Header />
+    </main>
   );
 };
 
