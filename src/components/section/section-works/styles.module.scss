@@ -1,144 +1,158 @@
 @use "../../../../src/scss/_abstract/variables" as *;
+@use "../../../../src/scss/_abstract/mixins" as *;
 
 .container__sectionWorks {
-  margin-top: 3rem;
-  padding: 0 1rem;
-
-  background-color: $color-white-gray;
-
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    margin-top: 52px;
+    padding: 0 16px;
 
     background-color: $color-white-gray;
 
-    h1 {
-      font-size: 1.9rem;
-      font-weight: 600;
+    div {
+        padding: 30px 0;
 
-      color: $color-purple;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        background-color: $color-white-gray;
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+
+            color: $color-purple;
+        }
+
+        p {
+            color: $color-purple;
+
+            font-size: 0.875rem;
+            font-weight: 400;
+
+            line-height: 120%;
+        }
+
+        button {
+            background: $color-purple;
+            border: none;
+            color: $color-white;
+
+            font-size: 0.875rem;
+            font-weight: 700;
+
+            padding: 10px 12px;
+            max-width: 50%;
+            // height: 36px;
+            // width: 130px;
+
+            border-radius: 4px;
+        }
     }
-
-    p {
-      color: $color-purple;
-
-      font-size: 1.1rem;
-
-      line-height: 120%;
-    }
-
-    button {
-      height: 3rem;
-      background: $color-purple;
-      border: none;
-      color: $color-white;
-      font-size: 1.2rem;
-      font-weight: 600;
-      width: 62%;
-      border-radius: 4px;
-    }
-  }
 }
 
 .vector--img {
-  display: none;
+    display: none;
 }
 
 .rectangle--img {
-  display: none;
+    display: none;
 }
 
 .works--link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
 
-  background-color: $color-white-gray;
+    background-color: $color-white-gray;
 
-  padding: 1rem;
+    padding: 1rem;
 
-  h3 {
-    font-size: 1.2rem;
-    font-weight: 500;
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 500;
 
-    text-align: center;
-    color: $color-purple;
-  }
+        text-align: center;
+        color: $color-purple;
+    }
 
-  img {
-    height: 1.5rem;
-  }
+    img {
+        height: 1.5rem;
+    }
 }
 
-@media (min-width: 768px) {
-  .container__sectionWorks {
-    display: flex;
-    justify-content: space-between;
+@media (min-width: $tablet-breakpoint) {
+    .container__sectionWorks {
+        display: flex;
+        justify-content: space-between;
 
-    padding: 0 0 0 1rem;
+        padding: 0;
 
-    position: relative;
+        position: relative;
 
-    div {
-      width: 53%;
-      z-index: 1;
+        div {
+            padding-left: 32px;
+            padding-bottom: 0;
+            width: 53%;
+            z-index: 1;
 
-      h1 {
-        font-size: 2.3rem;
-        font-weight: 700;
-        color: #48319d;
-      }
+            h1 {
+                font-size: 2.3rem;
+                font-weight: 700;
+                color: #48319d;
+            }
+            > button {
+                margin-bottom: 30px;
+            }
+        }
+        > img {
+            max-height: 330px;
+        }
     }
-  }
 
-  .vector--img {
-    display: flex;
+    .vector--img {
+        display: flex;
 
-    position: absolute;
-    color: transparent;
-    right: 172px;
-    height: 58vh;
-    z-index: 0;
-  }
+        position: absolute;
+        color: transparent;
+        right: 172px;
+        z-index: 0;
 
-  .rectangle--img {
-    display: flex;
+        min-height: 100%;
+    }
 
-    color: transparent;
+    .rectangle--img {
+        display: flex;
 
-    height: 58vh;
-  }
+        color: transparent;
+
+        min-height: 100%;
+    }
 }
 
-@media (min-width: 1023px) {
-  .container__sectionWorks {
-    div {
-      gap: 3rem;
+@media (min-width: $desktop-breakpoint) {
+    .container__sectionWorks {
+        div {
+            gap: 0;
 
-      h1 {
-        font-size: 3.1rem;
-      }
+            h1 {
+                font-size: 4rem;
+                margin-bottom: 10px;
+            }
 
-      p {
-        font-size: 1.5rem;
-      }
+            p {
+                font-size: 1.25rem;
+                margin-bottom: 20px;
+            }
 
-      button {
-        height: 3.5rem;
+            button {
+                padding: 12px 28px;
 
-        font-size: 1.3rem;
-      }
+                font-size: 1.25rem;
+            }
+        }
+        > img {
+            max-height: 100%;
+        }
     }
-  }
-
-  .vector--img {
-    right: 195px;
-    height: 69.1vh;
-  }
-
-  .rectangle--img {
-    height: 69vh;
-  }
 }
