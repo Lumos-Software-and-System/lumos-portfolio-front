@@ -1,0 +1,47 @@
+@use "../../../scss/_abstract/variables" as *;
+@use "../../../../src/scss/_abstract/mixins" as *;
+
+.container__formSubscrib {
+  background-color: $color-purple;
+  color: $color-white;
+
+  padding: 1rem;
+
+  @include flexColumn();
+  gap: 1rem;
+
+  h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  button {
+    height: 2rem;
+    width: 10rem;
+
+    border-radius: 2px;
+    border: none;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    span {
+      background: linear-gradient(to right, $color-pink, $color-purple);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+@media (min-width: $tablet-breakpoint) {
+  .container__formSubscrib {
+    padding: 1rem 8rem;
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .container__formSubscrib {
+    padding: 1rem 14rem;
+  }
+}
