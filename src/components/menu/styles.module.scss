@@ -1,0 +1,61 @@
+@use "../../scss/_abstract/mixins" as *;
+@use "../../scss/_abstract/variables" as *;
+
+.menuContainer {
+    position: fixed;
+    top: 0;
+    z-index: 9;
+
+    @include flexRow();
+
+    width: 100vw;
+    height: 100vh;
+
+    .menuContent {
+        position: relative;
+        background-color: $color-purple;
+        width: 80%;
+
+        > button {
+            position: absolute;
+            top: 20px;
+            right: 16px;
+
+            background-color: transparent;
+            border: none;
+        }
+
+        .navMobile {
+            padding: 56px 16px 40px;
+
+            > ul {
+                @include flexColumn();
+                gap: 18px;
+
+                font-size: 1.125rem;
+                font-weight: 600;
+
+                color: $color-white;
+                text-transform: uppercase;
+            }
+        }
+
+        > div {
+            padding-left: 10px;
+            @include flexColumn();
+            gap: 10px;
+
+            > p {
+                padding-left: 6px;
+            }
+        }
+    }
+    .menuBg {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 20%;
+    }
+
+    @media (min-width: $tablet-breakpoint) {
+        display: none;
+    }
+}

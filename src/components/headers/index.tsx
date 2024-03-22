@@ -1,14 +1,24 @@
+"use client";
+
+import useMenu from "@/hooks/useMenu.hook";
 import { BiMenuAltRight } from "react-icons/bi";
 import Link from "next/link";
 
 import styles from "./styles.module.scss";
 
 const Header = () => {
+    const { handleMenu } = useMenu();
+
+    const menuProps = {
+        size: 40,
+    };
+
     return (
         <header className={styles.header}>
             <figure>logo</figure>
-
-            <BiMenuAltRight className={styles.menuButton} />
+            <button onClick={handleMenu}>
+                <BiMenuAltRight className={styles.menuButton} {...menuProps} />
+            </button>
             <nav className={styles.navDesktop}>
                 <ul>
                     <li>
