@@ -8,8 +8,9 @@ const subscribSchema = z.object({
     .max(120, { message: "Apenas é permitido 120 caracteres." }),
   email: z
     .string()
-    .email({ message: "Formato de e-mail inválido." })
-    .min(1, { message: "Digite seu e-mail aqui." }),
+    .nonempty({ message: "Digite seu e-mail aqui" })
+    .min(1, { message: "Digite seu e-mail aqui." })
+    .email({ message: "Formato de e-mail inválido." }),
 });
 
 export default subscribSchema;
