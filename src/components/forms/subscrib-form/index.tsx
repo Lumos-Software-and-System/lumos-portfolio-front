@@ -1,9 +1,9 @@
 "use client";
-
-import Subscribs from "@/interfaces/subscribe.interface";
+import { Subscribs } from "@/interfaces/subscribe.interface";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import subscribSchema from "@/schemas/subscrib.schema";
+import useSubscribe from "@/hooks/useSubscribe.hook";
 import styles from "./styles.module.scss";
 
 const SubscribForm = () => {
@@ -15,8 +15,10 @@ const SubscribForm = () => {
     resolver: zodResolver(subscribSchema),
   });
 
+  const { postSubscribe } = useSubscribe();
+
   const submit = (formData: Subscribs) => {
-    console.log(formData);
+    postSubscribe(formData);
   };
 
   return (
