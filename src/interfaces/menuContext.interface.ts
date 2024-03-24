@@ -1,7 +1,7 @@
-interface iMenuContextProps {
-    menu: boolean;
-    setMenu: React.Dispatch<React.SetStateAction<boolean>>;
-    handleMenu: () => void;
+interface MenuContextProps {
+  menu: boolean;
+  setMenu: React.Dispatch<React.SetStateAction<boolean>>;
+  handleMenu: () => void;
 }
 
-export type { iMenuContextProps };
+export type { MenuContextProps };
