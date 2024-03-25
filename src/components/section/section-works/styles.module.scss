@@ -2,157 +2,156 @@
 @use "../../../../src/scss/_abstract/mixins" as *;
 
 .container__sectionWorks {
-  margin-top: 52px;
-  padding: 0 16px;
-
-  background-color: $color-white-gray;
-
-  div {
-    padding: 30px 0;
-
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    margin-top: 52px;
+    padding: 0 16px;
 
     background-color: $color-white-gray;
 
-    h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
+    div {
+        padding: 30px 0;
 
-      color: $color-purple;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        background-color: $color-white-gray;
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+
+            color: $color-purple;
+        }
+
+        p {
+            color: $color-purple;
+
+            font-size: 0.875rem;
+            font-weight: 400;
+
+            line-height: 120%;
+        }
+
+        button {
+            background: $color-purple;
+            color: $color-white;
+
+            border: none;
+
+            font-size: 0.875rem;
+            font-weight: 700;
+
+            padding: 10px 12px;
+            max-width: 50%;
+
+            border-radius: 4px;
+        }
     }
-
-    p {
-      color: $color-purple;
-
-      font-size: 0.875rem;
-      font-weight: 400;
-
-      line-height: 120%;
-    }
-
-    button {
-      background: $color-purple;
-      border: none;
-      color: $color-white;
-
-      font-size: 0.875rem;
-      font-weight: 700;
-
-      padding: 10px 12px;
-      max-width: 50%;
-      // height: 36px;
-      // width: 130px;
-
-      border-radius: 4px;
-    }
-  }
 }
 
 .vector--img {
-  display: none;
+    display: none;
 }
 
 .rectangle--img {
-  display: none;
+    display: none;
 }
 
 .works--link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
 
-  background-color: $color-white-gray;
+    background-color: $color-white-gray;
 
-  padding: 1rem;
+    padding: 1rem;
 
-  h3 {
-    font-size: 1.2rem;
-    font-weight: 500;
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 500;
 
-    text-align: center;
-    color: $color-purple;
-  }
+        text-align: center;
+        color: $color-purple;
+    }
 
-  img {
-    height: 1.5rem;
-  }
+    img {
+        height: 1.5rem;
+    }
 }
 
 @media (min-width: $tablet-breakpoint) {
-  .container__sectionWorks {
-    display: flex;
-    justify-content: space-between;
+    .container__sectionWorks {
+        display: flex;
+        justify-content: space-between;
 
-    padding: 0;
+        padding: 0;
 
-    position: relative;
+        position: relative;
 
-    div {
-      padding-left: 32px;
-      padding-bottom: 0;
-      width: 53%;
-      z-index: 1;
+        div {
+            padding-left: 32px;
+            padding-bottom: 0;
+            width: 53%;
+            z-index: 1;
 
-      h1 {
-        font-size: 2.3rem;
-        font-weight: 700;
-        color: #48319d;
-      }
-      > button {
-        margin-bottom: 30px;
-      }
+            h1 {
+                font-size: 2.3rem;
+                font-weight: 700;
+                color: #48319d;
+            }
+            > button {
+                margin-bottom: 30px;
+            }
+        }
+        > img {
+            max-height: 330px;
+        }
     }
-    > img {
-      max-height: 330px;
+
+    .vector--img {
+        display: flex;
+
+        position: absolute;
+        color: transparent;
+        right: 172px;
+        z-index: 0;
+
+        min-height: 100%;
     }
-  }
 
-  .vector--img {
-    display: flex;
+    .rectangle--img {
+        display: flex;
 
-    position: absolute;
-    color: transparent;
-    right: 172px;
-    z-index: 0;
+        color: transparent;
 
-    min-height: 100%;
-  }
-
-  .rectangle--img {
-    display: flex;
-
-    color: transparent;
-
-    min-height: 100%;
-  }
+        min-height: 100%;
+    }
 }
 
 @media (min-width: $desktop-breakpoint) {
-  .container__sectionWorks {
-    div {
-      gap: 0;
+    .container__sectionWorks {
+        div {
+            gap: 0;
 
-      h1 {
-        font-size: 4rem;
-        margin-bottom: 10px;
-      }
+            h1 {
+                font-size: 4rem;
+                margin-bottom: 10px;
+            }
 
-      p {
-        font-size: 1.25rem;
-        margin-bottom: 20px;
-      }
+            p {
+                font-size: 1.25rem;
+                margin-bottom: 20px;
+            }
 
-      button {
-        padding: 12px 28px;
+            button {
+                padding: 12px 28px;
 
-        font-size: 1.25rem;
-      }
+                font-size: 1.25rem;
+            }
+        }
+        > img {
+            max-height: 100%;
+        }
     }
-    > img {
-      max-height: 100%;
-    }
-  }
 }

@@ -2,110 +2,111 @@
 @use "../../../../src/scss/_abstract/mixins" as *;
 
 .container__formSubscrib {
-  background-color: $color-purple;
-  color: $color-white;
+    background-color: $color-purple;
+    color: $color-white;
 
-  padding: 1rem;
+    padding: 18px 16px 0 16px;
 
-  @include flexColumn();
-  gap: 1rem;
-
-  h2 {
-    font-size: 1.2rem;
-    text-align: center;
-    font-weight: 600;
-  }
-
-  div {
     @include flexColumn();
-    gap: 1rem;
+    gap: 10px;
 
-    input {
-      width: 100%;
-      height: 30px;
-      border-radius: 80px;
-      border: none;
-      background-color: $color-purple-black;
-      color: $color-white;
+    h2 {
+        font-size: 1.125rem;
+        font-weight: 700;
+
+        margin-bottom: 14px;
+
+        text-align: center;
     }
 
-    input::placeholder {
-      padding: 0 0.8rem;
-      color: $color-white;
+    div {
+        @include flexColumn();
+        gap: 5px;
+
+        input {
+            padding: 10px 10px;
+
+            font-size: 0.875rem;
+            font-weight: 500;
+
+            border: none;
+            border-radius: 80px;
+
+            background-color: $color-purple-black;
+            color: $color-white;
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.7);
+                font-family: "Urbanist", sans-serif;
+            }
+            &:focus {
+                outline: 0;
+
+                border: 1px solid $color-purple-black;
+
+                color: rgba(255, 255, 255, 0.9);
+            }
+        }
+        p {
+            padding-left: 10px;
+
+            font-size: 0.75rem;
+            font-style: italic;
+            letter-spacing: 1px;
+
+            margin-bottom: 10px;
+
+            color: rgb(233, 41, 41);
+        }
     }
-  }
 
-  button {
-    height: 2rem;
+    button {
+        margin-top: 11px;
 
-    border-radius: 20px;
+        padding: 7px 0;
 
-    border: none;
+        border-radius: 30px;
 
-    font-size: 1.2rem;
-    font-weight: 700;
+        border: none;
 
-    span {
-      background: linear-gradient(to right, $color-pink, $color-purple);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+        font-size: 0.875rem;
+        font-weight: 700;
+
+        span {
+            color: $color-purple;
+        }
     }
-  }
 }
 
 @media (min-width: $tablet-breakpoint) {
-  .container__formSubscrib {
-    align-items: center;
+    .container__formSubscrib {
+        align-items: center;
+        gap: 15px;
 
-    h2 {
-      font-size: 2.2rem;
+        h2 {
+            margin-bottom: 17px;
+            font-size: 2.875rem;
+        }
+
+        div {
+            width: 65%;
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            input {
+                padding: 12px 20px;
+
+                font-size: 1.25rem;
+            }
+        }
+
+        button {
+            padding: 9px 20px;
+            margin-top: 9px;
+            font-size: 1.25rem;
+
+            width: 65%;
+            max-width: 650px;
+        }
     }
-
-    div {
-      width: 65%;
-
-      margin: 0 auto;
-
-      input {
-        height: 45px;
-        font-size: 1.2rem;
-      }
-    }
-
-    button {
-      height: 40px;
-      border-radius: 20px;
-      width: 65%;
-    }
-  }
-}
-
-@media (min-width: $desktop-breakpoint) {
-  .container__formSubscrib {
-    padding: 1rem 14rem;
-  }
-}
-
-@media (min-width: 1439px) {
-  .container__formSubscrib {
-    h2 {
-      font-size: 3.5rem;
-    }
-
-    div {
-      input {
-        height: 60px;
-        font-size: 1.5rem;
-      }
-
-      p {
-        font-size: 1.2rem;
-      }
-    }
-
-    button {
-      height: 55px;
-      border-radius: 45px;
-    }
-  }
 }
