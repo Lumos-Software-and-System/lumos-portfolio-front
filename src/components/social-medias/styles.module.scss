@@ -9,3 +9,16 @@
     border: none;
   }
 }
+
+@media (min-width: 1023px) {
+  .socialContainer {
+    > button {
+      img {
+        transition: transform 0.5s;
+      }
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

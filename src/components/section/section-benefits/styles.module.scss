@@ -25,6 +25,10 @@
 
       color: $color-purple;
 
+      > img {
+        animation: pingPong 1s infinite alternate;
+      }
+
       > h3 {
         margin-top: 7px;
 
@@ -56,6 +60,17 @@
 
     border: none;
     border-radius: 3px;
+
+    animation: pingPong 1s infinite alternate;
+  }
+
+  @keyframes pingPong {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
   }
 
   @media (min-width: $tablet-breakpoint) {
