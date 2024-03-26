@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000",
-  timeout: 9000,
+    baseURL: "https://subscribes-lumos-software-and-system.onrender.com",
+    timeout: 9000,
 });
 
 export default api;
