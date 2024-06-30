@@ -7,40 +7,10 @@
 
 .normalStyle {
   @include serviceListNormal();
-
-  animation: slideLeft 2s ease-in-out forwards;
-  animation-timeline: view();
-  animation-range: cover 0% cover 55%;
-
-  @keyframes slideLeft {
-    0% {
-      opacity: 0;
-      transform: translate(-1000vw, 0);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(0, 0);
-    }
-  }
 }
 
 .invertedStyle {
   @include serviceListReverse();
 
   background-color: $color-purple-black;
-
-  animation: slideRigth 2s ease-in-out forwards;
-  animation-timeline: view();
-  animation-range: cover 0% cover 50%;
-
-  @keyframes slideRigth {
-    0% {
-      opacity: 0;
-      transform: translate(1000vw, 0);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(0, 0);
-    }
-  }
 }

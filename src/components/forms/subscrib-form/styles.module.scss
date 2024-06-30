@@ -2,111 +2,119 @@
 @use "../../../../src/scss/_abstract/mixins" as *;
 
 .container__formSubscrib {
-    background-color: $color-purple;
-    color: $color-white;
+  background-color: $color-purple;
+  color: $color-white;
 
-    padding: 18px 16px 0 16px;
+  padding: 18px 16px 0 16px;
 
+  @include flexColumn();
+  gap: 10px;
+
+  h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+
+    margin-bottom: 14px;
+
+    text-align: center;
+  }
+
+  div {
     @include flexColumn();
-    gap: 10px;
+    gap: 5px;
 
-    h2 {
-        font-size: 1.125rem;
-        font-weight: 700;
+    input {
+      padding: 10px 10px;
 
-        margin-bottom: 14px;
+      font-size: 0.875rem;
+      font-weight: 500;
 
-        text-align: center;
-    }
+      border: none;
 
-    div {
-        @include flexColumn();
-        gap: 5px;
+      border-radius: 3px;
 
-        input {
-            padding: 10px 10px;
+      background-color: $color-purple-black;
 
-            font-size: 0.875rem;
-            font-weight: 500;
-
-            border: none;
-            border-radius: 80px;
-
-            background-color: $color-purple-black;
-            color: $color-white;
-            &::placeholder {
-                color: rgba(255, 255, 255, 0.7);
-                font-family: "Urbanist", sans-serif;
-            }
-            &:focus {
-                outline: 0;
-
-                border: 1px solid $color-purple-black;
-
-                color: rgba(255, 255, 255, 0.9);
-            }
-        }
-        p {
-            padding-left: 10px;
-
-            font-size: 0.75rem;
-            font-style: italic;
-            letter-spacing: 1px;
-
-            margin-bottom: 10px;
-
-            color: rgb(233, 41, 41);
-        }
-    }
-
-    button {
-        margin-top: 11px;
-
-        padding: 7px 0;
-
-        border-radius: 30px;
-
+      color: $color-white;
+      &::placeholder {
         border: none;
-
-        font-size: 0.875rem;
-        font-weight: 700;
-
-        span {
-            color: $color-purple;
-        }
+        color: $color-white;
+        font-family: "Urbanist", sans-serif;
+      }
     }
+
+    input:focus {
+      outline: none;
+    }
+
+    p {
+      padding-left: 10px;
+
+      font-size: 0.75rem;
+      font-style: italic;
+
+      letter-spacing: 1px;
+
+      margin-bottom: 10px;
+
+      color: $color-white;
+    }
+  }
+
+  button {
+    margin-top: 8px;
+
+    padding: 7px 0;
+
+    border-radius: 3px;
+
+    border: none;
+
+    font-size: 0.875rem;
+    font-weight: 700;
+
+    span {
+      font-size: 1.2rem;
+      font-weight: 700;
+      background: linear-gradient(to right, #ed15ff, #48319d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
 }
 
 @media (min-width: $tablet-breakpoint) {
-    .container__formSubscrib {
-        align-items: center;
-        gap: 15px;
+  .container__formSubscrib {
+    align-items: center;
+    gap: 15px;
 
-        h2 {
-            margin-bottom: 17px;
-            font-size: 2.875rem;
-        }
-
-        div {
-            width: 65%;
-            max-width: 650px;
-
-            margin: 0 auto;
-
-            input {
-                padding: 12px 20px;
-
-                font-size: 1.25rem;
-            }
-        }
-
-        button {
-            padding: 9px 20px;
-            margin-top: 9px;
-            font-size: 1.25rem;
-
-            width: 65%;
-            max-width: 650px;
-        }
+    h2 {
+      margin-bottom: 17px;
+      font-size: 2.875rem;
     }
+
+    div {
+      width: 65%;
+      max-width: 650px;
+
+      margin: 0 auto;
+
+      input {
+        padding: 12px 20px;
+
+        font-size: 1.25rem;
+      }
+    }
+
+    button {
+      padding: 9px 20px;
+      margin-top: 9px;
+
+      font-size: 1.25rem;
+
+      width: 65%;
+
+      max-width: 650px;
+    }
+  }
 }
